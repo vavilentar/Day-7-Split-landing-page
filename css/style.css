@@ -6,11 +6,89 @@
 
 body {
 	font-family: 'Ubuntu';
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
 	height: 100vh;
 	overflow: hidden;
 	margin: 0;
 }
+
+h1 {
+	font-size: 4rem;
+	color: #fff;
+	position: absolute;
+	left: 50%;
+	top: 20%;
+	transform: translateX(-50%);
+	white-space: nowrap;
+}
+
+.btn {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	left: 50%;
+	top: 40%;
+	transform: translateX(-50%);
+	text-decoration: none;
+	color: #fff;
+	border: #fff solid 0.2rem;
+	font-size: 1rem;
+	font-weight: bold;
+	text-transform: uppercase;
+	width: 15rem;
+	padding: 1.5rem;
+}
+
+.split.left .btn:hover {
+	background-color: rgba(87, 84, 236, 1);
+
+}
+
+.split.right .btn:hover {
+	background-color: rgba(141, 223, 202, 1);
+}
+
+.container {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background: #333;
+}
+
+.split {
+	position: absolute;
+	width: 50%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.split.left {
+	left: 0;
+	background: url(https://bestvietnam.ru/wp-content/uploads/2019/09/%D0%91%D0%B0%D1%80%D1%81%D0%B5%D0%BB%D0%BE%D0%BD%D0%B0.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.split.left::before {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(87, 84, 236, 0.7);
+}
+
+.split.right::before {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(141, 223, 202, 0.7);
+}
+
+.split.right {
+	right: 0;
+	background: url(https://img4.goodfon.ru/wallpaper/nbig/9/b8/gdansk-poland-polsha-gdansk.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
